@@ -1,0 +1,150 @@
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+  
+    <link rel="stylesheet" href="style.css">
+
+</head>
+  <body>
+    <div style="overflow-x: scroll; height: 100%;">
+
+      <div id="botao-limpar">
+        <button id="limpar">Limpar tudo</button>
+      </div>
+      <div id="texto-geral">
+        <h1>Nevada</h1>
+        <h2>O robô que limpa neve e lixo do chão</h2>
+          <p>O intuito do robô Nevada é recolher o lixo, ou “neve” no chão de um ambiente.</p>
+          <p>Sua programação usa o sensor ultrassônico para identificar obstáculos e desviar deles.</p>
+          <p>Sua locomoção acontece a partir dos motores grandes.</p>
+          <p>A garra vai recolhendo o lixo/resíduo que possa ter no chão do ambiente.</p>
+        <div class="botoes">
+          <button id="fechar1">X</button>
+        </div>
+      </div>
+
+      <div id="texto-garra">
+        <h1>A garra</h1>
+        <h2>Informações gerais:</h2>
+          <p>A garra do Nevada é feita com um conjunto variado de peças.</p>
+          <p>Ela foi feita para recolher o lixo do chão e empurrá-lo conforme o Nevada anda.</p>
+          <p>O nome do robô vem da semelhança com a pá de um limpa-neve.</p>
+          <div class="botoes">
+            <button id="fechar2">X</button>
+        </div>
+      </div>
+
+      <div id="texto-sensor">
+        <h1>Sensor de distância</h1>
+        <h2>Informações gerais:</h2>
+          <p>O sensor que o Nevada tem é o Sensor Ultrasônico.</p>
+          <p>O Nevada utiliza ele para ver obstáculos e inicia a programação de desvio.</p>
+          <p>O sensor envia uma onde de som e identifica a distância do objeto de acordo com o "eco da onda emitida."</p>
+          <div class="botoes">
+            <button id="fechar3">X</button>
+        </div>
+      </div>
+      
+      <div id="texto-motor">
+        <h1>Motor grande</h1>
+        <h2>Informações gerais:</h2>
+          <p>O robô nevada possui dois motores desse.</p>
+          <p>Um deles move a roda para direita, o outro para a esquerda.</p>
+          <p>Motor forte de controle preciso.</p>
+          <div class="botoes">
+            <button id="fechar4">X</button>
+        </div>
+      </div>
+
+      <div id="texto-rodas">
+        <h1>Rodas</h1>
+        <h2>Informações gerais:</h2>
+          <p>Rodas largas usadas para locomoção e sustentação.</p>
+          <div class="botoes">
+            <button id="fechar5">X</button>
+        </div>
+      </div>
+
+      <div id="texto-ev3">
+        <h1>Bloco programável</h1>
+        <h2>Mais conhecido como EV3</h2>
+          <p>Onde programamos ou inserimos a programação feita no computador.</p>
+          <p>Nele há a bateria do robô e entrada USB para o cabo que conectamos no  computador.</p>
+          <p>Também tem conexão WI-FI e Bluetooth com o computador.</p>
+          <p>Há um interface que permite a programação direta e registros de dados no próprio bloco.</p>
+          <div class="botoes">
+            <button id="fechar6">X</button>
+        </div>
+      </div>
+
+      <div id="texto-pecas">
+        <h1>Peças</h1>
+        <h2>Lista de peças usadas no Nevada: </h2>
+          <p>Bloco programável: 1 un <br>
+            Bloco angular 90°: 8 un <br>
+            Bloco angular 130° : 2 un <br>
+            Bloco angular 150°: 2 un <br>
+            Bloco angular 1: 4 un <br>
+            Bucha cinza: 2 un <br>
+            Cabos: 4 un <br>
+            Eixo 3 módulos: 4 un <br>
+            Eixo 7 módulos: 2 un <br>
+            Eixo 2 módulos: 4 un <br>
+            Esfera de aço: 1 un <br>
+            Estrutura 5x7: 3 un <br>
+            Motor grande: 2 un <br>
+            Rodas: 2 un <br>
+            Painel curvado: 2 un (um curvado para direita, e um curvado para esquerda) <br>
+            Pino conector com bucha: 18 un <br>
+            Pino conector com fricção 3 módulos: 8 un <br>
+            Pino conector com fricção (preto): 12 un <br>
+            Pino conector: 6 un <br>
+            Pino conector com fricção e eixo: 8 un <br>
+            Pino conector 3 módulos:4 un <br>
+            Pino conector duplo: 2 un <br>
+            Rolamento de esfera: 1 un <br>
+            Sensor Ultrasônico: 1 un <br>
+            Viga 9 módulos: 2 un <br>
+            Viga 7 módulos: 7 un <br>
+            Viga 3 módulos: 8 un <br>
+            Viga angular 3X7: 2 un <br>
+          </p>
+          <div class="botoes">
+            <button id="fechar7">X</button>
+          </div>
+      </div>
+    </div>
+    
+    <a-scene mindar-image="imageTargetSrc: ./targetsqrcode.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera> 
+
+      <a-entity id="robo-todo" mindar-image-target="targetIndex: 0">
+      </a-entity>
+
+      <a-entity id="robo-garra" mindar-image-target="targetIndex: 1">
+      </a-entity>
+
+      <a-entity id="robo-sensor" mindar-image-target="targetIndex: 2">
+      </a-entity>
+
+      <a-entity id="robo-motor" mindar-image-target="targetIndex: 3">
+      </a-entity>
+
+      <a-entity id="robo-rodas" mindar-image-target="targetIndex: 4">
+      </a-entity>
+
+      <a-entity id="robo-ev3" mindar-image-target="targetIndex: 5">
+      </a-entity>
+
+      <a-entity id="robo-pecas" mindar-image-target="targetIndex: 6">
+      </a-entity>
+
+    </a-scene>
+        
+    <script src="script.js"></script>
+  </body>
+</html>
