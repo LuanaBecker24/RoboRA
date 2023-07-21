@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgba(204, 78, 78, 0.897);
+    color: aliceblue;
+}
+
+.textos{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10rem;
+    gap: 1rem;
+}
+
+
+a{
+    border: 1px solid black;
+    border-radius: 7px;
+    height: 30px;
+    width: 5rem;
+    background-color: rgb(248, 248, 231);
+    margin-top: 1rem;
+    padding: 3px;
+    text-decoration: none;
+    color: black;
+    margin-top: 1rem;
+}
+
+
+.footer{
+    margin-top: 8rem;
+}
